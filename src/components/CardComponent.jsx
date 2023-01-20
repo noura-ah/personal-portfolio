@@ -3,7 +3,7 @@ import { Container } from '@mui/system'
 
 const CardCmponent = (props) => {
     const { image, title, content, url, direction, tags } = props
-    console.log(tags)
+
     return (
         <Grid container direction={direction}>
             <Grid item >
@@ -19,7 +19,7 @@ const CardCmponent = (props) => {
                         </Typography>
                         <Container disableGutters sx={{ mt: 3 }}>
                             {tags.map(tag =>
-                                <Button size="small" sx={{ mr: 1, mt: 1, bgcolor: "#9575cd", color: 'white', '&:hover': { bgcolor: "#b39ddb" } }} href={url} >
+                                <Button key={tag} size="small" sx={{ mr: 1, mt: 1, bgcolor: "#9575cd", color: 'white', '&:hover': { bgcolor: "#b39ddb" } }} href={url} >
                                     #{tag}
                                 </Button>
                             )}
