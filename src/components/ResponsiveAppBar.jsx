@@ -102,7 +102,7 @@ function ResponsiveAppBar() {
               component="a"
               href=""
               sx={{
-                mr: 2,
+                mr: 5,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
                 fontFamily: 'monospace',
