@@ -6,7 +6,6 @@ import '@fontsource/roboto/700.css';
 
 import Main from './pages/Main';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Django from './pages/Django';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Main />} />   
-          <Route exact path='/projects/1' element={<Django />} />   
         </Routes>
       </BrowserRouter>
     </div>

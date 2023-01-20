@@ -1,30 +1,33 @@
-import { Card, CardContent, CardMedia, CardActions, Button, Typography } from '@mui/material'
-import { flexbox } from '@mui/system'
+import { Card, CardContent, Button, Typography, Grid } from '@mui/material'
+import { Container } from '@mui/system'
 
 const CardCmponent = (props) => {
-    const { image, title, content, url,direction } = props
+    const { image, title, content, url, direction, tags } = props
+    console.log(tags)
     return (
-        <div style={{display:'flex',alignItems:'center', flexDirection:direction? direction:''}}>
-            <CardMedia
-                component="img"
-                alt="green iguana"
-                image={image}
-                sx={{ mr:-3,ml:-3, width: 420, height:250, position:'relative'}}
-            />
-            <Card sx={{ maxWidth: 500, bgcolor: 'inherit', border: '2px solid #4db6ac' }} elevation={0} >
-                <CardContent sx={{ mx:3, mt:3 }}>
-                    <Typography align="left" gutterBottom variant="h5" component="h5">
-                        {title}
-                    </Typography>
-                    <Typography align="left"  variant="body2" color="text.secondary">
-                        {content}
-                    </Typography>
-                </CardContent>
-                <CardActions sx={{ mx: 3, mb:3 }}>
-                    <Button sx={{color:"#d4e157"}} href={url} size="small">Learn More</Button>
-                </CardActions>
-            </Card>
-        </div>
+        <Grid container direction={direction}>
+            <Grid item >
+                <Typography variant="h2" component="h2" sx={{ mr: -3, ml: -3, mb: -3, color: "#d4e157" }}>
+                    {title}
+                </Typography>
+            </Grid>
+            <Grid item>
+                <Card sx={{ maxWidth: 500, bgcolor: 'inherit', border: '2px solid #4db6ac' }} elevation={0} >
+                    <CardContent sx={{ mx: 3, mt: 3 }}>
+                        <Typography align="left" variant="body2" color="text.secondary">
+                            {content}
+                        </Typography>
+                        <Container disableGutters sx={{ mt: 3 }}>
+                            {tags.map(tag =>
+                                <Button size="small" sx={{ mr: 1, mt: 1, bgcolor: "#9575cd", color: 'white', '&:hover': { bgcolor: "#b39ddb" } }} href={url} >
+                                    #{tag}
+                                </Button>
+                            )}
+                        </Container>
+                    </CardContent>
+                </Card>
+            </Grid>
+        </Grid>
     )
 }
 

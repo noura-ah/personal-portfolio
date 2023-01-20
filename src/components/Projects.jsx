@@ -1,5 +1,5 @@
 import GeneralContents from "./GeneralContents"
-import { Box, Typography } from "@mui/material"
+import { Grid, useMediaQuery } from "@mui/material"
 import ListComponent from "./ListComponent"
 import CardCmponent from "./CardComponent"
 
@@ -8,7 +8,7 @@ const Projects = () => {
     const list = [
         <CardCmponent
             image="https://img.youtube.com/vi/cU6KwimPJGU/maxresdefault.jpg"
-            title="Admission website"
+            title="Admission"
             content="A Python/Django web application where it provides courses for students. The website 
                 also managed by administrators. This web allows for students to register and login.
                 Students can apply to course. Moreover, students can edit their profile and upload 
@@ -17,7 +17,8 @@ const Projects = () => {
                 Admin also can add, edit, and delete courses.He/She also can read and reply messages 
                 from both gusts and students.
                 "
-            url="/projects/1" />,
+            url=""
+            tags={['Django','Python','Bootstrap']} />,
         <CardCmponent
             image="https://img.youtube.com/vi/SD4Bb3jyOnY/maxresdefault.jpg"
             title="iCare store"
@@ -32,18 +33,27 @@ const Projects = () => {
             page as well. In addition, if product is out of stock or almost out of stock it will 
             be shown in the product card.
             "
-            direction='row-reverse' />,
+            direction='row-reverse' 
+            tags={['Spring boot','Java','Bootstrap']}/>,
         <CardCmponent
             image="https://img.youtube.com/vi/t1QzcJbCAkg/maxresdefault.jpg"
             title="Fly-Booking"
-            content="A MERN stack web application" />,
+            content="A MERN stack web application. It website where you can search for flights available by choosing a certain 
+            source and destination, then you can book a flight and pay then receive a ticket" 
+            tags={['MERN','MongoDB','Express.js','React.js','Node.js','Bootstrap']}/>,
 
     ]
+
+    const matches = useMediaQuery('(min-width:900px)');
     return (
-        <Box py={10}>
-            <GeneralContents py={3} variant_type="h2" content="Projects I worked on" color="#B64D57" align="left" />
-            <ListComponent list={list} />
-        </Box>
+        <Grid container py={10} sx={{ display:"flex" , alignItems:"center", justifyContent:matches?"none":"center"}}>
+            <Grid item lg={12} md={10} sm={10}>
+                <GeneralContents pb={3} variant_type="h2" content="Projects I worked on" color="#B64D57" align="left" />
+            </Grid>
+            <Grid item lg={12} md={12} sm={10}>
+                <ListComponent list={list} />
+            </Grid>
+        </Grid>
     )
 }
 

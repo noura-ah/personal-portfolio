@@ -15,7 +15,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { BrowserRouter } from 'react-router-dom'
 
 
-const pages = ["Home",'Frameworks', 'Projects'];
+const pages = ["Home", 'Frameworks', 'Projects','Contact-Me'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -56,7 +56,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            NORAH
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -111,7 +111,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            NORAH
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <BrowserRouter>

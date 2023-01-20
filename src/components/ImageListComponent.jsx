@@ -1,7 +1,7 @@
 import { ListItem, ListItemText, Typography, ImageList, ImageListItem, useMediaQuery } from "@mui/material"
 
 const ImageListComponent = (props) => {
-    const matches = useMediaQuery('(min-width:800px)');
+    const matches = useMediaQuery('(min-width:600px)');
 
     const { list, w, h } = props
     return (
@@ -9,7 +9,9 @@ const ImageListComponent = (props) => {
             {list.map((val, index) => {
                 return (
                     val.icon ?
-                        <ImageListItem key={index}>
+                        <ImageListItem key={index} sx={{ p: 3, m: 1,
+                            borderTop: matches ? val.top : '', borderLeft: matches ? val.left : '', 
+                            borderBottom: matches ? val.bottom : '', borderRight: matches ? val.right : '' }}>
                             <img
                                 style={{ width: 200, objectFit: 'contain' }}
                                 src={val.icon}
