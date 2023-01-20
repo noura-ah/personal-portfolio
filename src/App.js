@@ -14,7 +14,7 @@ function App() {
       <ResponsiveAppBar/>
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Main />} />   
+          <Route exact path='/personal-website' element={<Main />} />   
         </Routes>
       </BrowserRouter>
     </div>
