@@ -1,7 +1,7 @@
-import GeneralContents from "./GeneralContents"
+import GeneralContents from "../components/GeneralContents"
 import { Grid, useMediaQuery } from "@mui/material"
-import ListComponent from "./ListComponent"
-import CardCmponent from "./CardComponent"
+import ListComponent from "../components/ListComponent"
+import CardCmponent from "../components/CardComponent"
 
 
 const Projects = () => {

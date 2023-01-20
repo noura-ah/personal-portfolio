@@ -1,7 +1,7 @@
-import GeneralContents from "./GeneralContents"
+import GeneralContents from "../components/GeneralContents"
 import React from "react"
 import { Grid,useMediaQuery } from "@mui/material"
-import ImageListComponent from "./ImageListComponent"
+import ImageListComponent from "../components/ImageListComponent"
 
 const Frameworks = () => {
     const frameworks_list = [

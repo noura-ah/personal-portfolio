@@ -1,8 +1,8 @@
-import Header from "../components/Header"
-import Frameworks from "../components/Frameworks"
-import Projects from "../components/Projects"
+import Header from "../contents/Header"
+import Frameworks from "../contents/Frameworks"
+import Projects from "../contents/Projects"
 import { Container, CssBaseline } from "@mui/material"
-import Contacts from "../components/Contacts"
+import Contacts from "../contents/Contacts"
 
 const Main = () => {
 

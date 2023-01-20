@@ -2,7 +2,7 @@ import { IconButton } from "@mui/material"
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import GeneralContents from "./GeneralContents";
+import GeneralContents from "../components/GeneralContents";
 import { Container } from "@mui/system";
 const Contacts = () => {
     return (
