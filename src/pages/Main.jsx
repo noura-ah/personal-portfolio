@@ -23,7 +23,6 @@ const Main = () => {
                     <Contacts/>
                 </div>
             </Container>
-            kkkkcs
         </ div>
     )
 }
