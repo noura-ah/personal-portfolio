@@ -1,7 +1,7 @@
 {
   "name": "norah-website",
   "version": "0.1.0",
-  "homepage": "https://noura-ah.github.io/personal-website/",
+  "homepage": "https://noura-ah.github.io/personal-portfolio/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
