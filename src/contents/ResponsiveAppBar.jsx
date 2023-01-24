@@ -84,7 +84,7 @@ function ResponsiveAppBar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Button sx={{ color: 'inherit' }} component={Link} to={`#${page}`}>{page}</Button>
+                    <Button sx={{ color: 'primary.main' }} component={Link} to={`#${page}`}>{page}</Button>
                   </MenuItem>
                 ))}
               </Menu>
@@ -126,7 +126,6 @@ function ResponsiveAppBar() {
                 alignItems: 'center',
                 justifyContent: 'end',
                 bgcolor: 'inherit',
-                color: 'primary.main',
                 borderRadius: 1,
                 flexGrow: 1,
               }}
