@@ -126,7 +126,7 @@ function ResponsiveAppBar() {
                 alignItems: 'center',
                 justifyContent: 'end',
                 bgcolor: 'inherit',
-                color: 'text.primary',
+                color: 'primary.main',
                 borderRadius: 1,
                 flexGrow: 1,
               }}
