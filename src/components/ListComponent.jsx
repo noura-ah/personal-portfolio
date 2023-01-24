@@ -4,11 +4,11 @@ const ListComponent = (props) => {
     const { list } = props
     return (
         <List variant="masonry" >
-            {list.map((item, index) => 
-                    <ListItem key={index} sx={{my:8}} >
-                        <ListItemText primary={<Typography component="div" variant="body1">{item}</Typography>} />
-                    </ListItem>
-                )}
+            {list.map((item, index) =>
+                <ListItem key={index} sx={{ my: 8 }} >
+                    <ListItemText primary={<Typography component="div" variant="body1">{item}</Typography>} />
+                </ListItem>
+            )}
         </List>)
 }
 

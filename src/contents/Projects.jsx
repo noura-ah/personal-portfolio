@@ -48,7 +48,7 @@ const Projects = () => {
     return (
         <Grid container py={10} sx={{ display:"flex" , alignItems:"center", justifyContent:matches?"none":"center"}}>
             <Grid item lg={12} md={10} sm={10}>
-                <GeneralContents pb={3} variant_type="h2" content="Projects I worked on" color="#B64D57" align="left" />
+                <GeneralContents pb={3} variant_type="h3" content="Projects I worked on" color="red.main" align="left" />
             </Grid>
             <Grid item lg={12} md={12} sm={10}>
                 <ListComponent list={list} />

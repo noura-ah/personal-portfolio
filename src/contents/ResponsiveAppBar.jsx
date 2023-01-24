@@ -7,38 +7,32 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { HashLink as Link } from 'react-router-hash-link';
 import { BrowserRouter } from 'react-router-dom'
+import ColorModeContext from '../context/colorModeContext';
+import MaterialUISwitch from '../themes/switchButton'
 
 
 const pages = ["Home", 'Frameworks', 'Projects', 'Contact-Me'];
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const colorMode = React.useContext(ColorModeContext);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
-    <AppBar sx={{ bgcolor: "inherit", color: '#9575cd', backdropFilter: "blur(20px)" }} elevation={0} >
+    <AppBar sx={{ bgcolor: "inherit", color: 'primary.main', backdropFilter: "blur(20px)" }} elevation={0} >
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
           <BrowserRouter>
@@ -59,7 +53,6 @@ function ResponsiveAppBar() {
             >
               NORAH
             </Typography>
-
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -91,7 +84,7 @@ function ResponsiveAppBar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Button sx={{ color: '#9575cd' }} component={Link} to={`#${page}`}>{page}</Button>
+                    <Button sx={{ color: 'inherit' }} component={Link} to={`#${page}`}>{page}</Button>
                   </MenuItem>
                 ))}
               </Menu>
@@ -100,9 +93,8 @@ function ResponsiveAppBar() {
               variant="h5"
               noWrap
               component="a"
-              href=""
+              href="/personal-portfolio"
               sx={{
-                mr: 5,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
                 fontFamily: 'monospace',
@@ -110,12 +102,12 @@ function ResponsiveAppBar() {
                 letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
+                justifyContent: 'center'
               }}
             >
               NORAH
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -127,8 +119,20 @@ function ResponsiveAppBar() {
                   {page}
                 </Button>
               ))}
-
-
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'end',
+                bgcolor: 'inherit',
+                color: 'text.primary',
+                borderRadius: 1,
+                flexGrow: 1,
+              }}
+            >
+              <MaterialUISwitch defaultChecked
+                onClick={colorMode.toggleColorMode} />
             </Box>
           </BrowserRouter>
         </Toolbar>
