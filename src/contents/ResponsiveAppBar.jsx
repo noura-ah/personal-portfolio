@@ -130,6 +130,7 @@ function ResponsiveAppBar() {
                 borderRadius: 1,
                 flexGrow: 1,
               }}
+              disableGutters
             >
               <MaterialUISwitch defaultChecked
                 onClick={colorMode.toggleColorMode} />
