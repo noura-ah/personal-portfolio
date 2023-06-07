@@ -8,7 +8,7 @@ const Projects = () => {
     const list = [
         <CardCmponent
             image="https://img.youtube.com/vi/cU6KwimPJGU/maxresdefault.jpg"
-            title="Admission"
+            title="Admission website"
             content="A Python/Django web application where it provides courses for students. The website 
                 also managed by administrators. This web allows for students to register and login.
                 Students can apply to course. Moreover, students can edit their profile and upload 
@@ -17,8 +17,10 @@ const Projects = () => {
                 Admin also can add, edit, and delete courses.He/She also can read and reply messages 
                 from both gusts and students.
                 "
-            url=""
-            tags={['Django','Python','Bootstrap']} />,
+            url="https://github.com/noura-ah/admission_project"
+            variant= 'h4'
+            direction='row-reverse'
+            tags={['Django', 'Python', 'Bootstrap']} />,
         <CardCmponent
             image="https://img.youtube.com/vi/SD4Bb3jyOnY/maxresdefault.jpg"
             title="iCare store"
@@ -33,20 +35,29 @@ const Projects = () => {
             page as well. In addition, if product is out of stock or almost out of stock it will 
             be shown in the product card.
             "
-            direction='row-reverse' 
-            tags={['Spring boot','Java','Bootstrap']}/>,
+            url= 'https://github.com/noura-ah/iCare'
+            tags={['Spring boot', 'Java', 'Bootstrap']} />,
         <CardCmponent
             image="https://img.youtube.com/vi/t1QzcJbCAkg/maxresdefault.jpg"
             title="Fly-Booking"
             content="A MERN stack web application. It website where you can search for flights available by choosing a certain 
-            source and destination, then you can book a flight and pay then receive a ticket" 
-            tags={['MERN','MongoDB','Express.js','React.js','Node.js','Bootstrap']}/>,
-
+            source and destination, then you can book a flight and pay then receive a ticket"
+            direction='row-reverse'
+            url='https://github.com/noura-ah/React-Project'
+            tags={['MERN', 'MongoDB', 'Express.js', 'React.js', 'Node.js', 'Bootstrap']} />,
+        <CardCmponent
+            image=""
+            title="Project Management"
+            content="A MERN stack web application to manage projects and tasks for teams. Created with team members in span of 48
+            hours and won second place in Oivan and integrify Hackathon-winter 2023. "
+            variant= 'h4'
+            url = 'https://github.com/noura-ah/-Project_Management'
+            tags={['MERN', 'MongoDB', 'Express', 'React', 'Node', 'Tailwind']} />,
     ]
 
     const matches = useMediaQuery('(min-width:900px)');
     return (
-        <Grid container py={10} sx={{ display:"flex" , alignItems:"center", justifyContent:matches?"none":"center"}}>
+        <Grid container py={10} sx={{ display: "flex", alignItems: "center", justifyContent: matches ? "none" : "center" }}>
             <Grid item lg={12} md={10} sm={10}>
                 <GeneralContents pb={3} variant_type="h3" content="Projects I worked on" color="red.main" align="left" />
             </Grid>

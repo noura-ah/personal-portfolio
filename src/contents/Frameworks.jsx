@@ -15,11 +15,20 @@ const Frameworks = () => {
             'bl': 3,
         },
         {
+            "icon": '/angular.png',
+            'name': 'Angular',
+            'top': '2px solid #c62828',
+            'right': '2px solid #c62828',
+            'left': '2px solid #c62828',
+            'br': 3,
+            'tr': 3
+        },
+        {
             "icon": '/mern.png',
             'name': 'MERN (MongoDB, Express, React, Nodejs)',
             'top': '2px solid #c62828',
             'right': '2px solid #c62828',
-            'left': '2px solid #c62828',
+            'bottom': '2px solid #c62828',
             'tl': 3,
             'tr': 3
         },
@@ -36,11 +45,21 @@ const Frameworks = () => {
             "icon": '/spring.png',
             'name': 'Spring boot',
             'top': '2px solid #c62828',
+            // 'right': '2px solid #c62828',
+            'bottom': '2px solid #c62828',
+            'br': 3,
+            'tr': 3
+        },
+        {
+            "icon": '/dotnet.png',
+            'name': '.Net core',
+            'left': '2px solid #c62828',
             'right': '2px solid #c62828',
             'bottom': '2px solid #c62828',
             'br': 3,
             'tr': 3
         }
+
     ]
 
     const matches = useMediaQuery('(max-width:900px)');

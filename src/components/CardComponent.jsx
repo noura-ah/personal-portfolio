@@ -1,13 +1,15 @@
 import { Card, CardContent, Button, Typography, Grid } from '@mui/material'
 import { Container } from '@mui/system'
+import { IconButton } from "@mui/material"
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const CardCmponent = (props) => {
-    const { title, content, url, direction, tags } = props
+    const { title, content, url, direction, tags, variant } = props
 
     return (
         <Grid container direction={direction}>
             <Grid item >
-                <Typography variant="h3" component="h2" sx={{ mr: -3, ml: -3, mb: -2, color: "lime.main" }}>
+                <Typography variant={variant || 'h3'} sx={{ mr: -3, ml: -3, mb: -2, color: "lime.main" }}>
                     {title}
                 </Typography>
             </Grid>
@@ -26,6 +28,15 @@ const CardCmponent = (props) => {
                                     #{tag}
                                 </Button>
                             )}
+                            <IconButton
+                                size="small"
+                                color="inherit"
+                                aria-label="github"
+                                href={url}
+                                sx={{ color: 'lime.main', mr: 1, mt: 1, '&:hover': { color: 'lime.light' } }}
+                            >
+                                <GitHubIcon />
+                            </IconButton>
                         </Container>
                     </CardContent>
                 </Card>

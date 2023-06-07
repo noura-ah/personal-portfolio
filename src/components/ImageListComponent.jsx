@@ -8,7 +8,7 @@ const ImageListComponent = (props) => {
     const { list, w, h } = props
 
     return (
-        <ImageList sx={{ width: w, height: h }} cols={matches ? 2 : 1} gap={1} rowHeight={164}>
+        <ImageList sx={{ width: w, height: h }} cols={matches ? 3 : 1} gap={1} rowHeight={164}>
             {list.map((val, index) => {
                 return (
                     val.icon ?
